@@ -1,0 +1,14 @@
+﻿@page "/Test"
+@inject IJSRuntime JS
+
+
+<h3>Test</h3>
+
+<div id="stream"></div>
+
+@code {      
+    protected override void OnInitialized()
+    {
+        JS.InvokeVoidAsync("JanusStreamingInit", null);
+    }
+}
